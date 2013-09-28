@@ -8,9 +8,9 @@ end
 
 def alfred_xml items
   items_xml = ""
-  for item in items
+  items.each_with_index do |item, index|
     items_xml << <<-XML
-    <item uid="" arg="#{item[:arg]}">
+    <item uid="#{index}" arg="#{item[:arg]}">
       <title>#{item[:title]}</title>
       <subtitle>#{item[:subtitle]}</subtitle>
       <icon type="">./icon.png</icon>

@@ -19,7 +19,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Shaoshing Lee</string>
 	<key>description</key>
 	<string>Shanbay</string>
 	<key>disabled</key>
@@ -41,6 +41,8 @@
 				<string>Loading definitions</string>
 				<key>script</key>
 				<string>ruby ./query_word.rb "{query}"</string>
+				<key>title</key>
+				<string>Type any words for definition.</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
