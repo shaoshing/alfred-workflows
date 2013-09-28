@@ -1,10 +1,10 @@
 Alfred Workflows
 ================
 
-[Timestamp](/tree/master/Timestamp)
+[Timestamp](https://github.com/shaoshing/alfred-workflows/tree/master/Timestamp)
 
-[Shanbay, 扇贝](/tree/master/Shanbay)
+[Shanbay, 扇贝](https://github.com/shaoshing/alfred-workflows/tree/master/Shanbay)
 
-[Go-Document](/tree/master/go-document)
+[Go-Document](https://github.com/shaoshing/alfred-workflows/tree/master/go-documents)
 
-[SSH](/tree/master/ssh)
+[SSH](https://github.com/shaoshing/alfred-workflows/tree/master/ssh)
