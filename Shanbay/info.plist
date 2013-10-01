@@ -16,6 +16,14 @@
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7E4730CA-C93A-482E-AC82-119B09C11147</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -36,7 +44,7 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>keyword</key>
-				<string>shan</string>
+				<string>d</string>
 				<key>runningsubtext</key>
 				<string>Loading definitions</string>
 				<key>script</key>
@@ -72,6 +80,23 @@
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>http://dict.youdao.com/search?q={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>7E4730CA-C93A-482E-AC82-119B09C11147</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -86,6 +111,11 @@
 		<dict>
 			<key>ypos</key>
 			<real>70</real>
+		</dict>
+		<key>7E4730CA-C93A-482E-AC82-119B09C11147</key>
+		<dict>
+			<key>ypos</key>
+			<real>190</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>

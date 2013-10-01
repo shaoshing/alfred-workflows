@@ -51,5 +51,5 @@ def query word
 end
 
 
-word = ARGV[0]
+word = ARGV[0].strip
 alfred_xml(query(word))
