@@ -61,7 +61,7 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>ruby ./definition.rb "{query}"</string>
+				<string>open {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
