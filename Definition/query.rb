@@ -13,7 +13,7 @@ def alfred_xml items
     <item uid="#{index}" arg="#{item[:arg]}">
       <title>#{item[:title]}</title>
       <subtitle>#{item[:subtitle]}</subtitle>
-      <icon type="">./icon.png</icon>
+      <icon type="">./#{item[:icon]}.png</icon>
     </item>
     XML
   end
@@ -45,8 +45,8 @@ def query word
   zh_definition = shanbay_json["data"]["definition"]
   en_definition = shanbay_json["data"]["en_definitions"].values.join(", ")
 
-  definitions << {:arg => word, :title => pronunciation, :subtitle => zh_definition}
-  definitions << {:arg => word, :title => "EN definition", :subtitle => en_definition}
+  definitions << {:arg => word, :title => pronunciation, :subtitle => zh_definition, :icon => "shanbay"}
+  definitions << {:arg => word, :title => "EN definition", :subtitle => en_definition, :icon => "shanbay"}
   return definitions
 end
 

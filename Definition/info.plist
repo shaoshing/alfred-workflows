@@ -16,24 +16,16 @@
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>7E4730CA-C93A-482E-AC82-119B09C11147</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Shaoshing Lee</string>
 	<key>description</key>
-	<string>Shanbay</string>
+	<string>get word definition</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Shanbay</string>
+	<string>Word Definition</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -48,7 +40,7 @@
 				<key>runningsubtext</key>
 				<string>Loading definitions</string>
 				<key>script</key>
-				<string>ruby ./query_word.rb "{query}"</string>
+				<string>ruby ./query.rb "{query}"</string>
 				<key>title</key>
 				<string>Type any words for definition.</string>
 				<key>type</key>
@@ -69,7 +61,7 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>open http://www.shanbay.com/api/learning/add/{query}</string>
+				<string>ruby ./definition.rb "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -77,23 +69,6 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>06C9C4A9-38CE-441A-8D06-E2F2D8B39B60</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>plusspaces</key>
-				<false/>
-				<key>url</key>
-				<string>http://dict.youdao.com/search?q={query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>7E4730CA-C93A-482E-AC82-119B09C11147</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -111,11 +86,6 @@
 		<dict>
 			<key>ypos</key>
 			<real>70</real>
-		</dict>
-		<key>7E4730CA-C93A-482E-AC82-119B09C11147</key>
-		<dict>
-			<key>ypos</key>
-			<real>190</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
