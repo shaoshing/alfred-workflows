@@ -49,15 +49,27 @@ end
 def check_youdao word
   encoded_word = URI::encode(word)
   [{:arg => "http://dict.youdao.com/search?q=#{encoded_word}", :title => "Youdao",
-    :subtitle => "Get definition in Youdao", :icon => "youdao"}]
+    :subtitle => "View definition in Youdao", :icon => "youdao"}]
 end
 
+def check_merriam_webster word
+  encoded_word = URI::encode(word)
+  [{:arg => "http://www.merriam-webster.com/dictionary/#{encoded_word}", :title => "Merriam-Webster",
+    :subtitle => "View definition in Merriam-Webster", :icon => "mw"}]
+end
+
+def check_urban_dictionary word
+  encoded_word = URI::encode(word)
+  [{:arg => "http://www.urbandictionary.com/define.php?term=#{encoded_word}", :title => "Urban Dictionary",
+    :subtitle => "View definition in Urban Dictionary", :icon => "ud"}]
+end
 
 word = ARGV[0].strip
 
 if word && word.empty?
   alfred_xml(no_definition_found)
 else
-  definitions = check_shanbay(word) + check_youdao(word)
+  definitions = check_shanbay(word) + check_youdao(word) + check_merriam_webster(word) +
+    check_urban_dictionary(word)
   alfred_xml(definitions)
 end
