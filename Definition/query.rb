@@ -26,6 +26,10 @@ def alfred_xml items
 end
 
 def check_shanbay word
+  if word !~ /^[\w\ ]+$/
+    return []
+  end
+
   encoded_word = URI::encode(word)
 
   shanbay_query = open("http://www.shanbay.com/api/v1/bdc/search/?word=#{encoded_word}").read
