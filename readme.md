@@ -3,8 +3,10 @@ Alfred Workflows
 
 [Timestamp](https://github.com/shaoshing/alfred-workflows/tree/master/Timestamp)
 
-[Shanbay, 扇贝](https://github.com/shaoshing/alfred-workflows/tree/master/Shanbay)
+[Definition](https://github.com/shaoshing/alfred-workflows/tree/master/Definition)
 
 [Go-Document](https://github.com/shaoshing/alfred-workflows/tree/master/go-documents)
 
 [SSH](https://github.com/shaoshing/alfred-workflows/tree/master/ssh)
+
+[文](https://github.com/shaoshing/alfred-workflows/tree/master/ChineseConverter)
