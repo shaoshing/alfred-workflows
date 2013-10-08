@@ -34,7 +34,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>127</integer>
+				<integer>126</integer>
 				<key>keyword</key>
 				<string>d</string>
 				<key>runningsubtext</key>
@@ -59,7 +59,7 @@
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
-				<integer>127</integer>
+				<integer>0</integer>
 				<key>script</key>
 				<string>open {query}</string>
 				<key>type</key>
@@ -85,7 +85,7 @@
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<dict>
 			<key>ypos</key>
-			<real>70</real>
+			<real>60</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
