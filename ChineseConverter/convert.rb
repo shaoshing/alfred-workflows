@@ -8,6 +8,7 @@ def alfred_xml items
     <item uid="#{index}" arg="#{item[:arg]}">
       <title>#{item[:title]}</title>
       <subtitle>#{item[:subtitle]}</subtitle>
+      <icon type="">./icon.png</icon>
     </item>
     XML
   end
