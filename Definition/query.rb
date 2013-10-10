@@ -68,12 +68,21 @@ def check_urban_dictionary word
     :subtitle => "View definition in Urban Dictionary", :icon => "ud"}]
 end
 
+def check_longman word
+  encoded_word = URI::encode(word)
+  [{:arg => "http://www.ldoceonline.com/dictionary/#{encoded_word}", :title => "Longman",
+    :subtitle => "View definition in Longman", :icon => "lm"}]
+end
+
 word = ARGV[0].strip
 
 if word && word.empty?
   alfred_xml(no_definition_found)
 else
-  definitions = check_shanbay(word) + check_youdao(word) + check_merriam_webster(word) +
-    check_urban_dictionary(word)
+  definitions = check_shanbay(word) +
+    check_youdao(word) +
+    check_merriam_webster(word) +
+    check_urban_dictionary(word) +
+    check_longman(word)
   alfred_xml(definitions)
 end
