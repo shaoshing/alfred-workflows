@@ -11,8 +11,8 @@ def alfred_xml items
   items.each_with_index do |item, index|
     items_xml << <<-XML
     <item uid="#{index}" arg="#{item[:arg]}">
-      <title>#{item[:title]}</title>
-      <subtitle>#{item[:subtitle]}</subtitle>
+      <title>#{CGI.escapeHTML(item[:title])}</title>
+      <subtitle>#{CGI.escapeHTML(item[:subtitle])}</subtitle>
       <icon type="">./#{item[:icon]}.png</icon>
     </item>
     XML
