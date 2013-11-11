@@ -2,8 +2,8 @@ require 'open-uri'
 require 'json'
 require 'CGI'
 
-def no_definition_found
-  {:arg => "No definitions found", :title => "", :subtitle => ""}
+def hint_for_start_querying
+  [{:arg => "Hint", :title => "Hit space to start querying", :subtitle => "", :icon => "icon"}]
 end
 
 def alfred_xml items
@@ -74,11 +74,13 @@ def check_longman word
     :subtitle => "View definition in Longman", :icon => "lm"}]
 end
 
-word = ARGV[0].strip
+word = ARGV[0]
 
-if word && word.empty?
-  alfred_xml(no_definition_found)
+if word.strip.empty? || !word.end_with?(" ")
+  alfred_xml(hint_for_start_querying)
 else
+  word = word.strip
+
   definitions = check_shanbay(word) +
     check_youdao(word) +
     check_merriam_webster(word) +
