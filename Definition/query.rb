@@ -48,7 +48,7 @@ def check_shanbay word
   arg = "/tmp/#{word}.html #{options}"
 
   [
-    {:arg => arg, :title => arg, :subtitle => zh_definition, :icon => "shanbay"},
+    {:arg => arg, :title => pronunciation, :subtitle => zh_definition, :icon => "shanbay"},
     {:arg => arg, :title => "EN definition", :subtitle => en_definition, :icon => "shanbay"}
   ]
 end
