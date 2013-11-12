@@ -42,11 +42,14 @@ def check_shanbay word
   zh_definition = shanbay_json["data"]["definition"]
   en_definition = shanbay_json["data"]["en_definitions"].values.join(", ")
 
+  html_path = File.expand_path(__FILE__ + "/../add_shanbay.html")
+  options = "-a Google\\ Chrome.app -g"
+  `cp #{html_path} /tmp/#{word}.html`
+  arg = "/tmp/#{word}.html #{options}"
+
   [
-    {:arg => "http://www.shanbay.com/api/learning/add/#{encoded_word}",
-    :title => pronunciation, :subtitle => zh_definition, :icon => "shanbay"},
-    {:arg => "http://www.shanbay.com/api/learning/add/#{encoded_word}",
-    :title => "EN definition", :subtitle => en_definition, :icon => "shanbay"}
+    {:arg => arg, :title => arg, :subtitle => zh_definition, :icon => "shanbay"},
+    {:arg => arg, :title => "EN definition", :subtitle => en_definition, :icon => "shanbay"}
   ]
 end
 
@@ -76,11 +79,10 @@ end
 
 word = ARGV[0]
 
-if word.strip.empty? || !word.end_with?(" ")
+if !word.end_with?(" ") || word.strip.empty?
   alfred_xml(hint_for_start_querying)
 else
   word = word.strip
-
   definitions = check_shanbay(word) +
     check_youdao(word) +
     check_merriam_webster(word) +

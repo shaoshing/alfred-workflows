@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <script>
+      var word = location.pathname.split("/")[2].split(".")[0];
+      var iframe = document.createElement("IFRAME");
+      iframe.setAttribute("src", "http://www.shanbay.com/api/learning/add/"+word);
+      iframe.setAttribute("onload", "window.open('', '_self', '');window.close()");
+      document.body.appendChild(iframe);
+    </script>
+  </body>
+</html>
